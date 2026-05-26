@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>特約まる見えチェッカー｜カケサポ</title>
+  <meta name="description" content="加入中の保険の特約を3分で見える化。重複している特約と月額削減目安を表示します。完全ブラウザ完結でデータは外部送信されません。">
+
+  <!-- OGP -->
+  <meta property="og:title" content="特約まる見えチェッカー｜カケサポ">
+  <meta property="og:description" content="加入中の保険の特約を3分で見える化。重複している特約と月額削減目安を表示します。">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="og-image.png">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="カケサポ">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="特約まる見えチェッカー｜カケサポ">
+  <meta name="twitter:description" content="加入中の保険の特約を3分で見える化。重複している特約と月額削減目安を表示します。">
+  <meta name="twitter:image" content="og-image.png">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <h1>特約まる見え<br>チェッカー</h1>
+    <p class="lead">いま入っている保険の<strong>「特約」</strong>を5分で見える化。<br>重複しているムダと、月いくら下げられそうかをサクッと確認。</p>
+  </header>
+
+  <main>
+    <section id="step1" class="step active">
+      <div class="step-head">
+        <span class="step-num">Step 1</span>
+        <h2>いま入っている保険を選んでください</h2>
+        <p class="step-sub">複数選んでOK。クレカ付帯も忘れずに。</p>
+      </div>
+      <div id="policy-list" class="policy-list"></div>
+      <button id="to-step2" class="primary-btn" disabled>次へ</button>
+    </section>
+
+    <section id="step2" class="step">
+      <div class="step-head">
+        <span class="step-num">Step 2</span>
+        <h2>各保険の特約をチェック</h2>
+        <p class="step-sub">わからないものは「不明」でOK。証券は手元になくて大丈夫。</p>
+      </div>
+      <div id="rider-form"></div>
+      <div class="step-nav">
+        <button id="back-step1" class="ghost-btn">戻る</button>
+        <button id="to-step3" class="primary-btn">結果を見る</button>
+      </div>
+    </section>
+
+    <section id="step3" class="step">
+      <div class="step-head">
+        <span class="step-num">Step 3</span>
+        <h2>あなたの保険、こうなっています</h2>
+      </div>
+
+      <div id="savings-summary" class="savings-card"></div>
+      <div id="duplicate-list"></div>
+      <div id="review-list"></div>
+
+      <div class="disclaimer">
+        ※ 表示金額はあくまで業界一般の相場をもとにした<strong>目安</strong>です。実際の保険料・解約可否は個別契約により異なります。最終判断は加入中の代理店・FPと相談の上で行ってください。
+      </div>
+
+      <div class="cta-card">
+        <h3>特約見直しは、<br>固定費削減の入り口</h3>
+        <p>保険の重複特約だけでなく、通信費・サブスク・光熱費まで通すと、年間いくら自由に使えるお金が増えるかが具体的に見えてきます。<br>続きはLINEで。</p>
+        <a id="line-cta" href="#" class="primary-btn" target="_blank" rel="noopener">「固定費削減シミュレーター」を受け取る（5分・無料）</a>
+        <p class="cta-sub">同時に<strong>「お金の安心ゾーン家計タイプ診断」「見るだけ家計簿スタートガイド」</strong>も無料で届きます。<br>「うちの場合この特約は残すべき？」のような個別質問もそのままLINEで送ってOKです。</p>
+      </div>
+
+      <div class="step-nav">
+        <button id="back-step2" class="ghost-btn">特約を見直す</button>
+        <button id="restart" class="ghost-btn">最初からやり直す</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>提供：<a href="https://taspla.co.jp" target="_blank" rel="noopener">株式会社タスプラ</a>／カケサポ</p>
+    <p class="footer-note">入力内容はあなたの端末内だけで処理され、外部に送信されません。</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

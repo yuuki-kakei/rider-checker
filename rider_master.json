@@ -1,0 +1,68 @@
+{
+  "policies": [
+    {
+      "id": "automobile",
+      "label": "自動車保険",
+      "riders": ["personal_liability_auto", "legal_fee_auto", "travel_accident_auto", "vehicle_damage", "personal_injury_auto", "uninsured_motorist", "passenger_injury"]
+    },
+    {
+      "id": "fire",
+      "label": "火災保険",
+      "riders": ["personal_liability_fire", "water_damage", "theft", "earthquake"]
+    },
+    {
+      "id": "medical",
+      "label": "医療保険",
+      "riders": ["advanced_medical_med", "hospital_admission", "surgery", "outpatient", "critical_illness_med", "cancer_med"]
+    },
+    {
+      "id": "life",
+      "label": "生命保険",
+      "riders": ["advanced_medical_life", "critical_illness_life", "cancer_life", "disability"]
+    },
+    {
+      "id": "bicycle",
+      "label": "自転車保険",
+      "riders": ["personal_liability_bicycle"]
+    },
+    {
+      "id": "credit_card",
+      "label": "クレジットカード付帯",
+      "riders": ["personal_liability_credit", "travel_accident_credit"]
+    }
+  ],
+  "riders": [
+    { "id": "personal_liability_auto", "label": "個人賠償責任特約", "groupId": "personal_liability", "monthlyCostMin": 150, "monthlyCostMax": 300 },
+    { "id": "personal_liability_fire", "label": "個人賠償責任特約", "groupId": "personal_liability", "monthlyCostMin": 100, "monthlyCostMax": 200 },
+    { "id": "personal_liability_bicycle", "label": "個人賠償責任特約", "groupId": "personal_liability", "monthlyCostMin": 100, "monthlyCostMax": 150 },
+    { "id": "personal_liability_credit", "label": "個人賠償責任特約", "groupId": "personal_liability", "monthlyCostMin": 0, "monthlyCostMax": 100 },
+    { "id": "legal_fee_auto", "label": "弁護士費用特約", "groupId": "legal_fee", "monthlyCostMin": 200, "monthlyCostMax": 400 },
+    { "id": "travel_accident_auto", "label": "旅行傷害特約", "groupId": "travel_accident", "monthlyCostMin": 100, "monthlyCostMax": 300 },
+    { "id": "travel_accident_credit", "label": "旅行傷害保険（カード付帯）", "groupId": "travel_accident", "monthlyCostMin": 0, "monthlyCostMax": 0 },
+    { "id": "advanced_medical_med", "label": "先進医療特約", "groupId": "advanced_medical", "monthlyCostMin": 100, "monthlyCostMax": 200 },
+    { "id": "advanced_medical_life", "label": "先進医療特約", "groupId": "advanced_medical", "monthlyCostMin": 100, "monthlyCostMax": 200 },
+    { "id": "vehicle_damage", "label": "車両保険", "groupId": null, "monthlyCostMin": 2000, "monthlyCostMax": 6000 },
+    { "id": "personal_injury_auto", "label": "人身傷害保険", "groupId": null, "monthlyCostMin": 300, "monthlyCostMax": 800 },
+    { "id": "uninsured_motorist", "label": "無保険車傷害特約", "groupId": null, "monthlyCostMin": 50, "monthlyCostMax": 150 },
+    { "id": "passenger_injury", "label": "搭乗者傷害特約", "groupId": null, "monthlyCostMin": 100, "monthlyCostMax": 300 },
+    { "id": "water_damage", "label": "水濡れ補償", "groupId": null, "monthlyCostMin": 100, "monthlyCostMax": 300 },
+    { "id": "theft", "label": "盗難補償", "groupId": null, "monthlyCostMin": 100, "monthlyCostMax": 300 },
+    { "id": "earthquake", "label": "地震保険", "groupId": null, "monthlyCostMin": 1000, "monthlyCostMax": 3000 },
+    { "id": "hospital_admission", "label": "入院特約", "groupId": null, "monthlyCostMin": 500, "monthlyCostMax": 2000 },
+    { "id": "surgery", "label": "手術特約", "groupId": null, "monthlyCostMin": 300, "monthlyCostMax": 1000 },
+    { "id": "outpatient", "label": "通院特約", "groupId": null, "monthlyCostMin": 200, "monthlyCostMax": 800 },
+    { "id": "critical_illness_med", "label": "三大疾病特約", "groupId": "critical_illness", "monthlyCostMin": 500, "monthlyCostMax": 2000 },
+    { "id": "critical_illness_life", "label": "三大疾病特約", "groupId": "critical_illness", "monthlyCostMin": 500, "monthlyCostMax": 2000 },
+    { "id": "cancer_med", "label": "がん特約", "groupId": "cancer", "monthlyCostMin": 500, "monthlyCostMax": 2000 },
+    { "id": "cancer_life", "label": "がん特約", "groupId": "cancer", "monthlyCostMin": 500, "monthlyCostMax": 2000 },
+    { "id": "disability", "label": "就業不能特約", "groupId": null, "monthlyCostMin": 500, "monthlyCostMax": 2000 }
+  ],
+  "groups": [
+    { "id": "personal_liability", "label": "個人賠償（日常生活賠償）", "explanation": "1家族で1契約あれば十分。複数加入しても保険金は重複して受け取れない。" },
+    { "id": "legal_fee", "label": "弁護士費用特約", "explanation": "夫婦どちらかの車に1つで家族全員カバー。2台に多重付帯は不要なことが多い。" },
+    { "id": "travel_accident", "label": "旅行傷害保険", "explanation": "クレカに付帯があれば、自動車保険のオプションは不要なケースが多い。" },
+    { "id": "advanced_medical", "label": "先進医療特約", "explanation": "医療保険と生命保険の両方に付けても、給付は同じ実費の範囲内で重複しない。" },
+    { "id": "critical_illness", "label": "三大疾病特約", "explanation": "医療・生命の両方に同じ保障範囲で加入していると、片方は減額できる可能性。" },
+    { "id": "cancer", "label": "がん特約", "explanation": "がん保険を別契約している場合、特約は減額・解約の検討余地あり。" }
+  ]
+}
