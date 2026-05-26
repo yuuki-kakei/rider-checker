@@ -4,11 +4,8 @@
   // ====================
   // 設定値
   // ====================
-  // 暫定：3大特典まとめページ（LINE登録経由で受け取る既存導線）
-  // TODO: UTAGE管理画面で「特約まる見えチェッカー」専用の mtid を新規発行し、
-  //       https://go.taspla.co.jp/line/open/Pzdg6zWtlWoP?mtid=XXXXXXXX に差し替える
-  const LINE_CTA_URL = 'https://go.taspla.co.jp/p/XDVji1pnEUne';
-
+    // 特約まる見えチェッカー経由のLINE登録（UTAGE計測URL・mtid=PzAXRK4JUoY2）
+  const LINE_CTA_URL = 'https://go.taspla.co.jp/line/open/Pzdg6zWtlWoP?mtid=PzAXRK4JUoY2';
   // ====================
   // 状態
   // ====================
