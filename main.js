@@ -4,7 +4,8 @@
   // ====================
   // 設定値
   // ====================
-    // 特約まる見えチェッカー経由のLINE登録（UTAGE計測URL・mtid=PzAXRK4JUoY2）
+  // 特約まる見えチェッカー経由のLINE登録（UTAGE計測URL・mtid=PzAXRK4JUoY2）
+  // 2026-05-26 デプロイ再トリガー
   const LINE_CTA_URL = 'https://go.taspla.co.jp/line/open/Pzdg6zWtlWoP?mtid=PzAXRK4JUoY2';
   // ====================
   // 状態
